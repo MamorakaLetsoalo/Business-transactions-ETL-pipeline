@@ -1,0 +1,4 @@
+from_currency;to_currency;exchange_rate;effective_date
+USD;USD;1.00;2024-01-01
+EUR;USD;0.89;2024-01-01
+GBP;USD;1.30;2024-01-01
