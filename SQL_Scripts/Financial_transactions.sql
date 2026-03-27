@@ -17,3 +17,13 @@ VALUES
     (2, 102, 'XYZ Ltd', '2024-01-20', 1500.50, 'EUR'),
     (3, 103, 'Global Inc', '2024-02-05', 2000.00, 'GBP'),
     (4, 104, 'ABC Corp', '2024-02-10', 500.25, 'USD');
+
+    select * from financial_transactions
+
+--Create Customer details table
+   CREATE TABLE customer_details (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(50),
+    email VARCHAR(100),
+    phone VARCHAR(20)
+);
