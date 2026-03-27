@@ -75,11 +75,11 @@ transactions_warehouse.fact_transactions
 
 # Data Model
 Exchange Rates
-Column	Description
-from_currency	Source currency
-to_currency	Target currency
-exchange_rate	Conversion rate
-effective_date	Rate validity
+ | Column	Description
+from_currency|	Source currency
+to_currency|	Target currency
+exchange_rate|	Conversion rate
+effective_date|	Rate validity
 Supplier Info
 Column	Description
 supplier_id	Unique identifier
