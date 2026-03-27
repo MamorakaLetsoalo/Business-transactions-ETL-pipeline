@@ -9,3 +9,13 @@ CREATE TABLE financial_transactions (
     amount DECIMAL(10, 2),
     currency VARCHAR(10)
 );
+
+-- create additional data source
+SELECT 
+    t.*, 
+    c.customer_name,
+    c.email AS customer_email,
+    c.phone AS customer_phone
+FROM dbo.financial_transactions t
+INNER JOIN dbo.customer_details c 
+    ON t.customer_id = c.customer_id;
