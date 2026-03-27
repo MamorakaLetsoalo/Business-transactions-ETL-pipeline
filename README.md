@@ -29,6 +29,7 @@ Truncate staging tables:
 exchange_rates
 supplier_info
 financial_transactions
+
 Load CSV data into staging:
 Exchange Rates
 Supplier Info
@@ -37,8 +38,10 @@ Execute Data Flow Task
 <img width="435" height="425" alt="image" src="https://github.com/user-attachments/assets/2286d2fe-e443-4651-bc40-a815eddd9544" />
 
 2. Data Flow
+
 Step 1: Source
 Load financial transactions from SQL Server
+
 Step 2: Exchange Rate Lookup
 Join transactions with exchange rates using:
 from_currency
@@ -48,17 +51,22 @@ Outputs:
 
 ✅ Match → continues processing
 ⚠️ No Match → handled separately
+
 Step 3: Handle Missing Exchange Rates
 Derived Column:
 Assign default or flag missing exchange rate
+
 Step 4: Union All
 Combine matched and unmatched records
+
 Step 5: Currency Conversion
 Derived Column:
 Amount_USD = Amount * Exchange_Rate
+
 Step 6: Supplier Lookup
 Join with supplier dataset using:
 supplier_id
+
 Step 7: Load to Destination
 Final dataset loaded into:
 transactions_warehouse.fact_transactions
