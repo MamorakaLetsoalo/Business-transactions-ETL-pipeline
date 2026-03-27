@@ -19,3 +19,12 @@ SELECT
 FROM dbo.financial_transactions t
 INNER JOIN dbo.customer_details c 
     ON t.customer_id = c.customer_id;
+
+-- Alter table to add additional information required
+
+USE [financial_data_warehouse]
+
+    alter table dbo.financial_transactions
+  add [customer_name] [varchar](50) NULL,
+	[custome_email] [varchar](100) NULL,
+	[customer_phone] [varchar](20) NULL;
