@@ -27,3 +27,11 @@ VALUES
     email VARCHAR(100),
     phone VARCHAR(20)
 );
+
+-- Insert customer details data
+INSERT INTO customer_details (customer_id, customer_name, email, phone)
+VALUES
+    (101, 'John Doe', 'john.doe@example.com', '123-456-7890'),
+    (102, 'Jane Smith', 'jane.smith@example.com', '234-567-8901'),
+    (103, 'Mike Johnson', 'mike.johnson@example.com', '345-678-9012'),
+    (104, 'Emily Davis', 'emily.davis@example.com', '456-789-0123');
